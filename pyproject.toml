@@ -10,7 +10,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pytraeger"
-version = "0.3"
+version = "0.4"
 authors = [
   { name="Julian Schauder", email="pytraeger@schauder.info" },
 ]

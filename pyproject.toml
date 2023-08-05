@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2023 Julian Schauder <pytraeger@schauder.info>
+#
+# SPDX-License-Identifier: MIT
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+
+[project]
+name = "pytraeger"
+version = "0.3"
+authors = [
+  { name="Julian Schauder", email="pytraeger@schauder.info" },
+]
+description = "Simple API to interact with the Traeger-Grill API"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "paho-mqtt",
+    "asyncio",
+    "psycopg2",
+    "requests"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/zesoup/pytraeger"
+"Bug Tracker" = "https://github.com/zesoup/pytraeger/issues"

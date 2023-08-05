@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2023 Julian Schauder <pytraeger@schauder.info>
+#
+# SPDX-License-Identifier: MIT
+
+version: "3.7"
+
+
+services:
+  traeger:
+    build:
+      context: ./
+    env_file:
+      - .devcontainer/devcontainer.env
+    restart: unless-stopped
+    

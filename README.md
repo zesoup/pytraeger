@@ -3,7 +3,7 @@ SPDX-FileCopyrightText: 2023 Julian Schauder <pytraeger@schauder.info>
 
 SPDX-License-Identifier: MIT
 -->
-
+[![REUSE status](https://api.reuse.software/badge/github.com/fsfe/reuse-action)](https://api.reuse.software/info/github.com/fsfe/reuse-action)
 # PyTraeger
 This Project enables Traeger Grill Monitoring.
 For my Use-Case a Grafana Dashboard utilizes a PostgreSQL Database (demo/example02.py).

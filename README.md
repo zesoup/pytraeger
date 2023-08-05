@@ -12,7 +12,7 @@ This lib does 3 things.
 1) It initiates authentication with AWS
 2) It starts the MQTT-Client (thread 1)
 3) It polls for updates (thread 2)
-4) *It dies after 2 hours as i havent had time to implement accesstoken reneval yet*
+4) *It dies after 2 hours as i havent had time to implement accesstoken renewal yet*
 
 
 Usage in a Nutshell:

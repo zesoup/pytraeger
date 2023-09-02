@@ -45,7 +45,6 @@ class Manager:
         for grill in self.api.grills:
             threading.Thread(target=poll_updates, args=(
                 grill.identifier, self.api)).start()
-        threading.Thread(target=watchdog, args=()).start()
 
     def mqtt_event_dispatcher(self, topic, data):
         for grill in self.api.grills:
@@ -56,13 +55,6 @@ class Manager:
                               )
                 break
 
-
-def watchdog():
-    # After two hours, kill the program.
-    # The current implementation should die after exactly 1h due to outdated tokens.
-    # If an unexpected bug prevents natural death by age, initiate death by watchdog
-    time.sleep(60*60*2)
-    os._exit(1)
 
 
 def poll_updates(grill_identifier, parent_api: Api):
@@ -83,7 +75,7 @@ def poll_updates(grill_identifier, parent_api: Api):
             _LOGGER.debug("Polling Update for %s",
                           grill_identifier
                           )
-
+            parent_api.do_cognito()
             parent_api.update_grill(grill_identifier)
         except Exception as exception:
             _LOGGER.critical(exception)

@@ -12,7 +12,6 @@ This lib does 3 things.
 1) It initiates authentication with AWS
 2) It starts the MQTT-Client (thread 1)
 3) It polls for updates (thread 2)
-4) *It dies after 2 hours as i havent had time to implement accesstoken renewal yet*
 
 
 Usage in a Nutshell:
@@ -55,6 +54,4 @@ $ docker run --env-file .devcontainer/devcontainer.env  traegertest
 # Known Issues:
 
 * EMail-Login is case sensitive
-* Accesstoken reneval is not implemented.
-* The Watchdog
 * DB-Usecase doesnt clean up
